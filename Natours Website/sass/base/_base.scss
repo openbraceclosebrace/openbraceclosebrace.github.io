@@ -1,0 +1,45 @@
+/* universal selector: reset the browser */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /* enforces inherit on box-sizing*/
+  /*box-sizing: border-box; moved to body due to inheritance */
+}
+/* root font size is set here*/
+html {
+  // this defines what 1rem is
+  font-size: 62.5%; // 1 rem = 10px; 10px/16px = 62.5%
+
+  /*unnecessary
+  //@include respond(phone) {
+  //  font-size: 50%; // 1 rem = 8px; 8/16 = 50%
+  } */
+
+  @include respond(tablet-landscape) { //width < 1200?
+    font-size: 56.25%; // 1 rem = 9px; 9/16 = 56.25%
+  }
+
+  @include respond(tablet-portait) { //width < 900 ?
+    font-size: 50%; // 1 rem = 8px; 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1 rem = 12px; 12/16 = 75%
+  }
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tablet-portrait) {
+    padding: 0;
+  }
+}
+
+
+
+
+
