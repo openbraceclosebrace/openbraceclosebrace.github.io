@@ -1,0 +1,20 @@
+.header {
+  height: 100vh;
+  //background-image: linear-gradient(to right,
+  //        rgba($color-primary-light, .2),
+  //        rgba($color-primary-dark, .2)),
+  //url("../img/background-cover.jpg");
+  //background-image: radial-gradient(rgba($color-primary-light, 1),
+  //        rgba($color-primary-dark, 1), rgba($color-black, .78));
+  background-image: url("../img/background-cover-2.jpg");
+  background-size: cover;
+  padding: 0rem;
+  z-index: 1;
+  position: relative;
+
+  &__text {
+    @include center();
+    text-align: center;
+
+  }
+}

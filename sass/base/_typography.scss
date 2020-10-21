@@ -1,0 +1,43 @@
+body {
+  font-family: Avenir, sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+
+  &--main {
+    display: block;
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: 1.1rem;
+    animation: moveInLeft 1s ease-out;
+
+    &:hover {
+      transform: scale(1.1) skewY(-3deg);
+      color: $color-black;
+      text-shadow: .5rem 1rem 2rem rgba($color-black, 0.2);
+      background-color: white;
+
+    }
+  }
+
+  &--sub {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    animation: moveInRight 1s ease-out;
+
+    &:hover {
+      transform: scale(1.1) skewY(3deg);
+      color: $color-black;
+      background-color: white;
+      text-shadow: .5rem 1rem 2rem rgba($color-black, 0.2);
+    }
+  }
+}

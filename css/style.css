@@ -1,0 +1,116 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 100%;
+    transform: translateX(0px); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 100%;
+    transform: translateX(0px); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: Avenir, sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7; }
+
+.heading-primary {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: 1.1rem;
+    animation: moveInLeft 1s ease-out; }
+    .heading-primary--main:hover {
+      transform: scale(1.1) skewY(-3deg);
+      color: #1A1A1D;
+      text-shadow: 0.5rem 1rem 2rem rgba(26, 26, 29, 0.2);
+      background-color: white; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    animation: moveInRight 1s ease-out; }
+    .heading-primary--sub:hover {
+      transform: scale(1.1) skewY(3deg);
+      color: #1A1A1D;
+      background-color: white;
+      text-shadow: 0.5rem 1rem 2rem rgba(26, 26, 29, 0.2); }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-large {
+  margin-bottom: 8rem !important; }
+
+.header {
+  height: 100vh;
+  background-image: url("../img/background-cover-2.jpg");
+  background-size: cover;
+  padding: 0rem;
+  z-index: 1;
+  position: relative; }
+  .header__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.navigation {
+  position: relative; }
+  .navigation__nav {
+    list-style-type: none;
+    text-align: center;
+    position: absolute; }
+  .navigation__list {
+    float: left;
+    margin: 2rem 1rem; }
+  .navigation__link, .navigation:link, .navigation:visited {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: orangered;
+    padding: 1rem 1.5rem; }
+
+.paragraph {
+  color: yellow;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3px 4px;
+  background-color: darkgrey;
+  text-align: center; }
