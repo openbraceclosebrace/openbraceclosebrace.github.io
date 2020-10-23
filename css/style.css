@@ -18,6 +18,14 @@
     opacity: 100%;
     transform: translateX(0px); } }
 
+@keyframes arrowDown {
+  0% {
+    top: 5rem; }
+  50% {
+    top: 8rem; }
+  100% {
+    top: 5rem; } }
+
 *,
 *::after,
 *::before {
@@ -73,13 +81,34 @@ body {
 .u-margin-bottom-large {
   margin-bottom: 8rem !important; }
 
+.down-arrow {
+  z-index: 100;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  transform: translateY(60rem);
+  opacity: 50%; }
+  .down-arrow::after {
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-right: 0.4rem solid white;
+    border-bottom: 0.4rem solid white;
+    transform: rotate(45deg);
+    animation: arrowDown 3s infinite ease; }
+
 .header {
-  height: 100vh;
+  height: 95vh;
   background-image: url("../img/background-cover-2.jpg");
   background-size: cover;
   padding: 0rem;
-  z-index: 1;
-  position: relative; }
+  z-index: 1; }
   .header__text {
     position: absolute;
     top: 50%;
@@ -88,21 +117,32 @@ body {
     text-align: center; }
 
 .navigation {
-  position: relative; }
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 100;
+  text-align: center; }
   .navigation__nav {
-    list-style-type: none;
-    text-align: center;
-    position: absolute; }
+    width: 100%;
+    height: 5vh;
+    background-color: #212121;
+    bottom: 0;
+    display: inline-block;
+    text-align: center; }
   .navigation__list {
-    float: left;
-    margin: 2rem 1rem; }
+    display: inline-block; }
+  .navigation #contact_us {
+    border-radius: 50px;
+    background: #0277BD;
+    height: 95%; }
   .navigation__link, .navigation:link, .navigation:visited {
     display: inline-block;
-    color: white;
+    color: #9E9E9E;
     text-decoration: none;
     text-transform: uppercase;
-    background-color: orangered;
     padding: 1rem 1.5rem; }
+    .navigation__link:hover, .navigation:link:hover, .navigation:visited:hover {
+      color: #FFFFFF; }
 
 .paragraph {
   color: yellow;
@@ -114,3 +154,24 @@ body {
   padding: 3px 4px;
   background-color: darkgrey;
   text-align: center; }
+
+.section {
+  color: #ffffff;
+  height: 75vh;
+  margin: 0; }
+
+#a {
+  background-color: #0074d9; }
+
+#b {
+  background-color: #2ecc40; }
+
+#c {
+  background-color: #ff851b; }
+
+#d {
+  background-color: #b10dc9; }
+
+h2 {
+  margin: 0;
+  padding: 0; }

@@ -29,3 +29,15 @@
     transform: translateX(0px);
   }
 }
+
+@keyframes arrowDown{
+  0%{
+    top:5rem;
+  }
+  50%{
+    top:8rem;
+  }
+  100%{
+    top:5rem;
+  }
+}

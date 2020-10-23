@@ -1,34 +1,40 @@
+
 .navigation {
-  position: relative;
+  position: sticky;
+  position: -webkit-sticky;
+  top:0;
+  z-index: 100;
+  text-align: center;
 
   &__nav {
-    //bottom: 4rem;
-    list-style-type: none;
+    width: 100%;
+    height: 5vh;
+    background-color: #212121;
+    bottom:0;
+    display: inline-block;
     text-align: center;
-    position: absolute;
-
-
-
-
   }
 
   &__list {
-    float: left;
-    margin: 2rem 1rem;
+    display: inline-block;
 
   }
-
-
-
+  #contact_us{
+    border-radius: 50px;
+    background: #0277BD;
+    height: 95%;
+  }
   &__link,
   &:link,
   &:visited {
     display: inline-block;
-    color: white;
+    color: #9E9E9E;
     text-decoration: none;
     text-transform: uppercase;
-    background-color: orangered;
     padding: 1rem 1.5rem;
+    &:hover{
+      color: $color-white;
 
+    }
   }
 }

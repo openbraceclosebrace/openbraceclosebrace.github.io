@@ -1,0 +1,23 @@
+.down-arrow{
+  width:100%;
+  margin: 0 auto;
+  text-align: center;
+  transform: translateY(60rem);
+  opacity: 50%;
+
+  &::after{
+    content:'';
+    width:4rem;
+    height: 4rem;
+    position: absolute;
+    margin: auto;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    border-right: 0.4rem solid white;
+    border-bottom: 0.4rem solid white;
+    transform: rotate(45deg);
+    animation: arrowDown 3s infinite ease;
+  }
+}
