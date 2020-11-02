@@ -6,7 +6,7 @@ body {
 }
 
 .heading-primary {
-  color: $color-white;
+  color: $color-white-1;
   text-transform: uppercase;
   margin-bottom: 6rem;
 
@@ -15,12 +15,13 @@ body {
     font-size: 5rem;
     font-weight: 400;
     letter-spacing: 1.1rem;
+    transition: all .2s ease-in-out;
     animation: moveInLeft 1s ease-out;
 
     &:hover {
       transform: scale(1.1) skewY(-3deg);
-      color: $color-black;
-      text-shadow: .5rem 1rem 2rem rgba($color-black, 0.2);
+      color: $color-black-1;
+      text-shadow: .5rem 1rem 2rem rgba($color-black-2, 0.2);
       background-color: white;
 
     }
@@ -31,13 +32,67 @@ body {
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 1.74rem;
+    transition: all .2s ease-in-out;
     animation: moveInRight 1s ease-out;
 
     &:hover {
       transform: scale(1.1) skewY(3deg);
-      color: $color-black;
+      color: $color-black-2;
       background-color: white;
-      text-shadow: .5rem 1rem 2rem rgba($color-black, 0.2);
+      text-shadow: .5rem 1rem 2rem rgba($color-black-2, 0.2);
     }
+  }
+}
+
+.heading-secondary {
+  font-size: 3rem;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  display: inline-block;
+  color: white;
+  transition: all .2s;
+
+  &:hover {
+    transform: scale(1.1) skewY(-3deg);
+    color: $color-primary-2;
+    text-shadow: .5rem 1rem 2rem rgba($color-black-2, 0.2);
+    background-color: white;
+    border-radius: 2rem;
+    letter-spacing: 1.1rem;
+
+
+    .underline {
+      border-bottom: 0;
+    }
+
+  }
+
+
+}
+
+.underline {
+  transition: all .1s;
+  padding: 1rem 8rem;
+  display: inline-block;
+  margin-top: 0;
+  border-bottom: .2rem solid white;
+
+  &:hover {
+    border-bottom: 0;
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  &:not(:last-child) {
+    padding-bottom: 1rem;
   }
 }
