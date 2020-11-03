@@ -22,11 +22,13 @@
 *::after,
 *::before {
   margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
+  padding: 0; }
 
 html {
   font-size: 62.5%; }
+
+body {
+  background-color: #161A1D; }
 
 body {
   font-family: Avenir, sans-serif;
@@ -46,8 +48,8 @@ body {
     animation: moveInLeft 1s ease-out; }
     .heading-primary--main:hover {
       transform: scale(1.1) skewY(-3deg);
-      color: #1A1A1D;
-      text-shadow: 0.5rem 1rem 2rem rgba(26, 26, 29, 0.2);
+      color: #161A1D;
+      text-shadow: 0.5rem 1rem 2rem rgba(11, 9, 10, 0.2);
       background-color: white; }
   .heading-primary--sub {
     display: block;
@@ -57,9 +59,47 @@ body {
     animation: moveInRight 1s ease-out; }
     .heading-primary--sub:hover {
       transform: scale(1.1) skewY(3deg);
-      color: #1A1A1D;
+      color: #0B090A;
       background-color: white;
-      text-shadow: 0.5rem 1rem 2rem rgba(26, 26, 29, 0.2); }
+      text-shadow: 0.5rem 1rem 2rem rgba(11, 9, 10, 0.2); }
+
+.heading-secondary {
+  font-size: 3rem;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  display: inline-block;
+  color: white;
+  transition: all .2s; }
+  .heading-secondary:hover {
+    transform: scale(1.1) skewY(-3deg);
+    color: #B1063A;
+    text-shadow: 0.5rem 1rem 2rem rgba(11, 9, 10, 0.2);
+    background-color: white;
+    border-radius: 2rem;
+    letter-spacing: 1.1rem; }
+    .heading-secondary:hover .underline {
+      border-bottom: 0; }
+
+.underline {
+  transition: all .1s;
+  padding: 1rem 8rem;
+  display: inline-block;
+  margin-top: 0;
+  border-bottom: .2rem solid white; }
+  .underline:hover {
+    border-bottom: 0; }
+
+.heading-tertiary {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    padding-bottom: 1rem; }
 
 .u-center-text {
   text-align: center !important; }
@@ -73,11 +113,75 @@ body {
 .u-margin-bottom-large {
   margin-bottom: 8rem !important; }
 
+.u-margin-bottom-extra-large {
+  margin-bottom: 12rem !important; }
+
+.hexagon-box {
+  background-color: transparent;
+  padding: 10rem 0rem;
+  position: relative;
+  transition: all .2s;
+  margin: 2rem 0; }
+  .hexagon-box:hover {
+    transform: scale(1.075); }
+    .hexagon-box:hover .hexagon-box__icon {
+      height: 22rem; }
+    .hexagon-box:hover .hexagon-box__text {
+      transition: all .3s;
+      font-size: 3.5rem;
+      color: #B1063A;
+      font-weight: 500;
+      background-color: white;
+      padding: 0 2rem;
+      border-radius: 2rem; }
+  .hexagon-box__icon {
+    height: 20rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%); }
+  .hexagon-box__text {
+    margin-top: 2rem;
+    color: rgba(245, 243, 244, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 110%);
+    font-size: 2rem;
+    font-weight: 100;
+    letter-spacing: .2rem; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 18rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 18rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 18rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 18rem) / 3) + 18rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 18rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc((100% - 18rem) / 2); }
+  .row .col-3-of-4 {
+    width: calc(((100% - 3 * 18rem) / 4) + ((100% - 18rem) / 2) + 18rem); }
+
 .header {
   height: 100vh;
   background-image: url("../img/background-cover-2.jpg");
   background-size: cover;
-  padding: 0rem;
+  padding: 0;
   z-index: 1;
   position: relative; }
   .header__text {
@@ -114,3 +218,14 @@ body {
   padding: 3px 4px;
   background-color: darkgrey;
   text-align: center; }
+
+.skills {
+  display: block;
+  padding: 20rem 0;
+  background-color: rgba(11, 9, 10, 0.2);
+  background-image: linear-gradient(to right, rgba(207, 45, 93, 0.5), rgba(137, 6, 45, 0.5)), url(../img/skills-cover.jpg);
+  background-size: cover;
+  margin-top: 30rem;
+  transform: skewY(-7deg); }
+  .skills > * {
+    transform: skewY(7deg); }
