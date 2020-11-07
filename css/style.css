@@ -151,6 +151,73 @@ body {
     font-weight: 100;
     letter-spacing: .2rem; }
 
+#message {
+  height: 150px;
+  resize: none; }
+
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: white;
+  color: inherit;
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 100%;
+  display: block; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid green; }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #C3073F; }
+  .form__input::-webkit-input-placeholder {
+    color: #393e46; }
+
+.form__label {
+  color: #161A1D;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-left: .5rem;
+  margin-top: .7rem;
+  display: block;
+  transition: all .3s; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 14pt;
+  background-color: #CF2D5D;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active, .btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -229,3 +296,28 @@ body {
   transform: skewY(-7deg); }
   .skills > * {
     transform: skewY(7deg); }
+
+.section-contact {
+  padding: 15rem 0;
+  background-image: url(/img/skills-cover.jpg);
+  background-size: cover;
+  margin-top: 30rem;
+  transform: skewY(7deg); }
+  .section-contact > * {
+    transform: skewY(-7deg); }
+
+.contact {
+  background-image: linear-gradient(110deg, #CF2D5D 0%, #CF2D5D 40%, rgba(255, 255, 255, 0.9) 40%);
+  background-size: 100%;
+  border-radius: 5px;
+  box-shadow: 0 1.5rem 4rem rgba(22, 26, 29, 0.4);
+  height: 50rem; }
+  .contact__heading {
+    position: fixed;
+    margin-top: 20rem;
+    margin-left: 5rem;
+    border-bottom: 0; }
+  .contact__form {
+    margin-left: 45%;
+    width: 40%;
+    padding: 6rem; }
