@@ -1,0 +1,17 @@
+{
+  "name": "openbraceclosebrace",
+  "version": "1.0.0",
+  "description": "Landing page for openbraceclosebrace",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Imran",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "node-cron": "2.0.3"
+  }
+}

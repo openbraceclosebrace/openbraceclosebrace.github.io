@@ -1,0 +1,87 @@
+.paragraph {
+  //color: yellow;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3px 4px;
+  background-color: darkgrey;
+  text-align: center;
+}
+
+.section {
+  color: #ffffff;
+  height: 75vh;
+  margin: 0;
+}
+
+//#a { background-color: #0074d9; }
+//#b { background-color: #2ecc40; }
+//#c { background-color: #ff851b; }
+//#d { background-color: #b10dc9; }
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.skills {
+  display: block;
+  padding: 20rem 0;
+  background-color: rgba($color-black-2, 0.2);
+  background-image: linear-gradient(to right,
+          rgba($color-primary-light, 0.5),
+          rgba($color-primary-dark, 0.5)),
+  url(../img/skills-cover.jpg);
+  background-size: cover;
+  margin-top: 30rem;
+  transform: skewY(-7deg);
+
+  & > * {
+    transform: skewY(7deg);
+  }
+
+
+}
+
+.about-us {
+  padding: 10rem 0 0 0;
+}
+
+.projects {
+  padding: 15rem 0 60rem 0;
+}
+
+
+.section-contact{
+  padding: 15rem 0;
+  background-image: url(/img/skills-cover.jpg);
+  background-size: cover;
+  margin-top: 30rem;
+  transform: skewY(7deg);
+
+  & > * {
+    transform: skewY(-7deg);
+  }
+}
+
+.contact{
+  background-image: linear-gradient(110deg, $color-primary-light 0%, $color-primary-light 40%,rgba($color-white-1,.9) 40%);
+  background-size: 100%;
+  border-radius: 5px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black-1, .4);
+  height: 50rem;
+  &__heading{
+    position: fixed;
+    margin-top: 20rem;
+    margin-left: 5rem;
+    border-bottom: 0;
+  }
+  &__form{
+    margin-left: 45%;
+    width: 40%;
+    padding: 6rem;
+  }
+
+}
