@@ -39,5 +39,18 @@
     opacity: 1;
     transform: translate(-50%, -50%);
   }
+  &__button{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    opacity: 0;
+    transition: opacity .35s ease;
+  }
+  &:hover &__button{
+    opacity: 1;
+  }
 }
+
+
 
