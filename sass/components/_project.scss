@@ -18,7 +18,7 @@
   }
 
   &:hover &__image {
-    filter: blur(3px) brightness(80%);
+    filter: blur(5px) brightness(80%);
   }
 
   &__caption {
@@ -26,7 +26,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, 20%);
-    color: $color-primary-2;
+    color: $color-white-1;
     text-transform: uppercase;
     font-size: 1.7rem;
     text-align: center;

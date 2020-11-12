@@ -23,10 +23,10 @@
 <!-- NAVBAR -->
 <nav class="navigation">
     <nav class="navigation__nav">
-        <li class="navigation__list"><a href="#" class="navigation__link">About Us</a></li>
-        <li class="navigation__list"><a href="#" class="navigation__link">Skills</a></li>
-        <li class="navigation__list"><a href="#" class="navigation__link">Projects</a></li>
-        <li class="navigation__list" id="contact_us"><a href="#" class="navigation__link">Contact Us</a></li>
+        <li class="navigation__list"><a href="#about-us-id" class="navigation__link">About Us</a></li>
+        <li class="navigation__list"><a href="#skills-id" class="navigation__link">Skills</a></li>
+        <li class="navigation__list"><a href="#projects-id" class="navigation__link">Projects</a></li>
+<!--        <li class="navigation__list" id="contact_us"><a href="#contact-us-id" class="navigation__link">Contact Us</a></li>-->
     </nav>
 </nav>
 <!--    <article class="section" id="a"><h2>Section A</h2></article>-->
@@ -35,7 +35,7 @@
 <!--    <article class="section" id="d"><h2>Section D</h2></article>-->
 
 <!-- ABOUT US -->
-<section class="about-us">
+<section class="about-us" id="about-us-id">
     <div class="u-center-text u-margin-bottom-extra-large">
         <div class="underline">
             <h2 class="heading-secondary">About Us</h2>
@@ -64,7 +64,7 @@
                     <span class="card__heading-span--2">Imran Rahman</span>
                 </h4>
                 <div class="card__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla. Adipiscing diam donec adipiscing tristique risus nec feugiat in.
+                    I'm currently a student studying Bachelors of Computing Science at UTS. I love the small things in life such as spending time with people, watching Manchester United dominate and of course, coding!
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@
                     <span class="card__heading-span--3">Sameer Mahmud</span>
                 </h4>
                 <div class="card__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla. Adipiscing diam donec adipiscing tristique risus nec feugiat in.
+                    I am currently a student at UNSW studying Comp Sci/Commerce. I enjoy math’s, science and the business world, continuously applying new knowledge into my personal and uni projects.
                 </div>
             </div>
         </div>
@@ -86,7 +86,7 @@
 </section>
 
 <!-- SKILLS -->
-<section class="skills">
+<section class="skills" id="skills-id">
     <div class="u-center-text u-margin-bottom-extra-large">
         <div class="underline">
             <h2 class="heading-secondary">Skills</h2>
@@ -141,7 +141,7 @@
 </section>
 
 <!-- PROJECTS -->
-<section class="projects">
+<section class="projects" id="projects-id">
     <div class="u-center-text u-margin-bottom-extra-large">
         <div class="underline">
             <h2 class="heading-secondary">Projects</h2>
@@ -151,21 +151,23 @@
     <div class="block">
         <div class="project">
             <figure class="project__square">
-                <img src="img/proj-1.jpeg" alt="" class="project__image">
-                <figcaption class="project__caption">UTS Timetable Application - Java</figcaption>
+                <a href="#popup" class="project__button">
+                    <img src="img/project-1-image.jpg" alt="" class="project__image">
+                </a>
+                <figcaption class="project__caption">Project 1</figcaption>
             </figure>
         </div>
 
         <div class="project">
             <figure class="project__square">
-                <img src="" alt="" class="project__image">
+                <img src="img/project-2-image.jpg" alt="" class="project__image">
                 <figcaption class="project__caption">Project 2</figcaption>
             </figure>
         </div>
 
         <div class="project">
             <figure class="project__square">
-                <img src="" alt="" class="project__image">
+                <img src="img/project-3-image.jpg" alt="" class="project__image">
                 <figcaption class="project__caption">Project 3</figcaption>
             </figure>
         </div>
@@ -174,29 +176,48 @@
     <div class="block">
         <div class="project">
             <figure class="project__square">
-                <img src="" alt="" class="project__image">
+                <img src="img/project-4-image.jpg" alt="" class="project__image">
                 <figcaption class="project__caption">Project 4</figcaption>
             </figure>
         </div>
 
         <div class="project">
             <figure class="project__square">
-                <img src="" alt="" class="project__image">
+                <img src="img/project-5-image.jpg" alt="" class="project__image">
                 <figcaption class="project__caption">Project 5</figcaption>
             </figure>
         </div>
 
         <div class="project">
             <figure class="project__square">
-                <img src="" alt="" class="project__image">
+                <img src="img/project-6-image.jpg" alt="" class="project__image">
                 <figcaption class="project__caption">Project 6</figcaption>
             </figure>
         </div>
     </div>
 </section>
 
-<!-- Contact Us -->
-<section class="section-contact">
+<section class="projects-popup" id="popup">
+    <div class="projects-popup__content">
+        <div class="projects-popup__left">
+            <img src="img/project-1-image.jpg" alt="" class="projects-popup__image">
+
+        </div>
+        <div class="projects-popup__right">
+            <a href="#projects-id" class="projects-popup__close">&times;</a>
+            <h2 class="heading-secondary u-margin-bottom-small">Project 1</h2>
+            <h3 class="heading-tertiary">Description: </h3>
+            <p class="projects-popup__text u-margin-bottom-small">
+                This is a template of the description of the project. This part will also contain a link to the project and also the github page.
+            </p>
+            <a href="#" class="projects-popup__link">GitHub Link</a>
+        </div>
+    </div>
+</section>
+
+<!--
+ <!- CONTACT US ->
+<section class="section-contact" id="contact-us-id">
     <div class="row">
         <div class="contact">
             <div class="u-center-text u-margin-bottom-small contact__heading">
@@ -220,6 +241,9 @@
         </div>
     </div>
 </section>
+
+-->
+
 
 </body>
 </html>
