@@ -8,8 +8,18 @@
 </head>
 
 <body>
+
 <!-- HEADER -->
+
 <header class="header">
+    <nav class="navigation">
+    <nav class="navigation__nav">
+        <li class="navigation__list"><a href="#about-us-id" class="navigation__link">About Us</a></li>
+        <li class="navigation__list"><a href="#skills-id" class="navigation__link">Skills</a></li>
+        <li class="navigation__list"><a href="#projects-id" class="navigation__link">Projects</a></li>
+        <!--        <li class="navigation__list" id="contact_us"><a href="#contact-us-id" class="navigation__link">Contact Us</a></li>-->
+    </nav>
+</nav>
     <div class="header__text">
         <h1 class="heading-primary">
             <span class="heading-primary--main">{}openbraceclosebrace</span>
@@ -19,16 +29,9 @@
     <div class = "down-arrow"></div>
 
 </header>
-
 <!-- NAVBAR -->
-<nav class="navigation">
-    <nav class="navigation__nav">
-        <li class="navigation__list"><a href="#about-us-id" class="navigation__link">About Us</a></li>
-        <li class="navigation__list"><a href="#skills-id" class="navigation__link">Skills</a></li>
-        <li class="navigation__list"><a href="#projects-id" class="navigation__link">Projects</a></li>
-<!--        <li class="navigation__list" id="contact_us"><a href="#contact-us-id" class="navigation__link">Contact Us</a></li>-->
-    </nav>
-</nav>
+
+
 <!--    <article class="section" id="a"><h2>Section A</h2></article>-->
 <!--    <article class="section" id="b"><h2>Section B</h2></article>-->
 <!--    <article class="section" id="c"><h2>Section C</h2></article>-->
@@ -243,10 +246,25 @@
 </section>
 
 -->
+<script>
+    const nav = document.querySelector('.navigation');
+    const offsetTop = nav.offsetTop;
 
+    function fixNav(){
+        console.log(offsetTop, window.scrollY)
+        if (window.scrollY >= offsetTop){
+            nav.classList.add('fixed-nav')
+        }
+        else{
+            nav.classList.remove('fixed-nav')
+        }
+    }
+    window.addEventListener('scroll', fixNav);
+</script>
 
 </body>
 </html>
+
 
 
 
