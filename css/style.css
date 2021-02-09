@@ -1,3 +1,18 @@
+/*
+0-600px : PHONE
+600 - 900px : Tablet (portrait)
+900 - 1200px: Tablet (landscape)
+(1200 - 1800) Normal styles
+1800px + : Big Desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+ */
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -41,6 +56,15 @@ a.anchor {
 html {
   font-size: 62.5%;
   scroll-behavior: smooth; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   background-color: #161A1D; }
@@ -62,6 +86,14 @@ body {
     letter-spacing: 1.1rem;
     transition: all .2s ease-in-out;
     animation: moveInLeft 1s ease-out; }
+    .heading-primary--main .break1 {
+      display: none; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        margin-left: 1rem;
+        font-size: 4rem; }
+        .heading-primary--main .break1 {
+          display: block; } }
     .heading-primary--main:hover {
       transform: scale(1.1) skewY(-3deg);
       color: #161A1D;
@@ -69,11 +101,14 @@ body {
       background-color: white; }
   .heading-primary--sub {
     display: block;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 1.74rem;
     transition: all .2s ease-in-out;
     animation: moveInRight 1s ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        font-size: 1.5rem; } }
     .heading-primary--sub:hover {
       transform: scale(1.1) skewY(3deg);
       color: #0B090A;
@@ -89,6 +124,13 @@ body {
   display: inline-block;
   color: white;
   transition: all .2s; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2rem;
+      margin-left: 1rem; } }
   .heading-secondary:hover {
     transform: scale(1.1) skewY(-3deg);
     color: #B1063A;
@@ -135,10 +177,13 @@ body {
 
 .down-arrow {
   width: 100%;
-  margin: 0 auto;
   text-align: center;
+  margin: 0 auto;
   transform: translateY(50rem);
   opacity: 50%; }
+  @media (max-width: 56.25em) {
+    .down-arrow {
+      padding-top: 50rem; } }
   .down-arrow::after {
     content: '';
     width: 4rem;
@@ -228,6 +273,10 @@ body {
     width: 80%;
     text-align: left;
     transform: rotate(90deg); }
+    @media (max-width: 56.25em) {
+      .card__heading {
+        right: -14rem;
+        top: 15rem; } }
   .card__heading-span {
     padding: 1rem 1.5rem;
     box-decoration-break: clone; }
@@ -419,6 +468,15 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem; } }
+  @media (max-width: 37.5em) {
+    .row {
+      max-width: 40rem; } }
   .row::after {
     content: "";
     display: table;
@@ -427,6 +485,13 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -441,7 +506,7 @@ body {
     width: calc(((100% - 3 * 6rem) / 4) + ((100% - 6rem) / 2) + 6rem); }
 
 .header {
-  height: 100vh;
+  height: 94vh;
   background-image: url("../img/background-cover-2.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -457,9 +522,7 @@ body {
 body .fixed-nav nav {
   position: fixed;
   top: 0;
-  width: 100%;
-  background-position: left;
-  transition: all .5s ease-out; }
+  width: 100%; }
 
 .navigation {
   z-index: 100;
@@ -472,9 +535,8 @@ body .fixed-nav nav {
     height: 6vh;
     text-align: center;
     /* "to left" / "to right" - affects initial color */
-    background: linear-gradient(to left, rgba(255, 0, 0, 0) 50%, #161A1D 50%) right;
-    background-size: 200%;
-    transition: .5s ease-out; }
+    background: #161A1D;
+    background-size: 200%; }
   .navigation__list {
     display: inline-block; }
   .navigation__link, .navigation:link, .navigation:visited {

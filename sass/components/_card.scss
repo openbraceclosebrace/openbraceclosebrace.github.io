@@ -83,11 +83,17 @@
     width: 80%;
     text-align: left;
     transform: rotate(90deg);
+    @include respond(tab-port){
+      right: -14rem;
+      top: 15rem;
+    }
+
   }
 
   &__heading-span {
     padding: 1rem 1.5rem;
     box-decoration-break: clone;
+
 
 
 

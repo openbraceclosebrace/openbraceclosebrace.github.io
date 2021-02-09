@@ -22,7 +22,8 @@
 </nav>
     <div class="header__text">
         <h1 class="heading-primary">
-            <span class="heading-primary--main">{}openbraceclosebrace</span>
+            <span class="heading-primary--main">
+                {}openbrace<br class = 'break1'>closebrace</br></span>
             <span class="heading-primary--sub">portfolio</span>
         </h1>
     </div>
@@ -255,10 +256,10 @@
     function fixNav(){
         console.log(offsetTop, window.scrollY)
         if (window.scrollY >= offsetTop){
-            nav.classList.add('fixed-nav')
+            nav.classList.add('fixed-nav');
         }
         else{
-            nav.classList.remove('fixed-nav')
+            nav.classList.remove('fixed-nav');
         }
     }
     window.addEventListener('scroll', fixNav);

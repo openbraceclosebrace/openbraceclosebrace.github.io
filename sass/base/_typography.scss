@@ -17,7 +17,16 @@ body {
     letter-spacing: 1.1rem;
     transition: all .2s ease-in-out;
     animation: moveInLeft 1s ease-out;
-
+    .break1{
+      display: none;
+    }
+    @include respond(phone){
+        margin-left: 1rem;
+        font-size: 4rem;
+      .break1{
+        display: block;
+      }
+    }
     &:hover {
       transform: scale(1.1) skewY(-3deg);
       color: $color-black-1;
@@ -29,11 +38,14 @@ body {
 
   &--sub {
     display: block;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 1.74rem;
     transition: all .2s ease-in-out;
     animation: moveInRight 1s ease-out;
+    @include respond(phone){
+      font-size: 1.5rem;
+    }
 
     &:hover {
       transform: scale(1.1) skewY(3deg);
@@ -54,6 +66,13 @@ body {
   color: white;
   transition: all .2s;
 
+  @include respond(tab-port){
+    font-size: 3rem;
+  }
+  @include respond(phone){
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
   &:hover {
     transform: scale(1.1) skewY(-3deg);
     color: $color-primary-2;

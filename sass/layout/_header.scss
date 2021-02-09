@@ -8,8 +8,7 @@
   //        rgba($color-primary-dark, 1), rgba($color-black, .78));
   //height: 100vh;
 
-  height: 100vh;
-  //height: 94vh;
+  height: 94vh;
   background-image: url("../img/background-cover-2.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -20,7 +19,6 @@
   &__text {
     @include center();
     text-align: center;
-
   }
 }
 

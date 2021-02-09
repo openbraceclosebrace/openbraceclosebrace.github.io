@@ -1,10 +1,12 @@
 .down-arrow{
   width:100%;
-  margin: 0 auto;
   text-align: center;
+  margin: 0 auto;
   transform: translateY(50rem);
   opacity: 50%;
-
+  @include respond(tab-port) {
+    padding-top: 50rem;
+  }
   &::after{
     content:'';
     width:4rem;

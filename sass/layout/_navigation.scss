@@ -2,9 +2,6 @@ body .fixed-nav nav{
   position: fixed;
   top:0;
   width: 100%;
-  background-position: left;
-  transition:all .5s ease-out;
-
   ;
 }
 .navigation {
@@ -18,9 +15,8 @@ body .fixed-nav nav{
     height: 6vh;
     text-align: center;
     /* "to left" / "to right" - affects initial color */
-    background: linear-gradient(to left, rgba(255,0,0,0) 50%, $color-black-1 50%) right;
+    background: $color-black-1;
     background-size: 200%;
-    transition: .5s ease-out;
   }
 
   &__list {
